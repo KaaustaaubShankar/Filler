@@ -104,14 +104,7 @@ if "model" not in st.session_state:
 
 # Reset
 if reset_btn:
-    seed_val = None
-    if seed_in.strip():
-        try:
-            seed_val = int(seed_in)
-        except ValueError:
-            st.warning("Seed must be an integer; ignoring.")
-            seed_val = None
-    reset_episode(seed=seed_val)
+    reset_episode(seed=None)
 
 # -----------------------------
 # Placeholders + render function
